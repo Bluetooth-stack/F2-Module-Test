@@ -133,9 +133,10 @@ document.body.onload = ()=>{
 
         //handling search event on button click and update the result on table
         search.addEventListener('click', ()=>{
+            tableContainer.innerHTML = '';
+            let tBody = createAnotherTab();
             //to handle no case-sensitive
             let searchText = input.value.toLowerCase();
-            tBody.innerHTML = '';
             data.forEach((object)=>{
                 let fn = object.first_name.toLowerCase();
                 let ln = object.last_name.toLowerCase();
